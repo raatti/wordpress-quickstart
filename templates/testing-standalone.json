@@ -61,9 +61,9 @@
             "required": true
         },
         {
-            "name": "PHP_VERSION",
+            "name": "PHP_REPO_URL",
             "description": "The version of the PHP builder.",
-            "value": "7.0",
+            "value": "openshift/php:7.0",
             "required": true
         }
     ],
@@ -107,8 +107,7 @@
                     "sourceStrategy": {
                         "from": {
                             "kind": "ImageStreamTag",
-                            "namespace": "openshift",
-                            "name": "php:${PHP_VERSION}"
+                            "name": "${PHP_REPO_URL}"
                         }
                     }
                 },
